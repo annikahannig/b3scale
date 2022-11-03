@@ -35,7 +35,7 @@ jobs:
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v3.2.0
         with:
-          version: ${{ github.ref_name }}
+          version: latest 
           args: release --rm-dist
         env:
           GPG_FINGERPRINT: ${{ steps.import_gpg.outputs.fingerprint }}
